@@ -34,7 +34,7 @@ exports.login = async (req, res) => {
       .cookie(JWT.COOKIE_NAME, token, {
         httpOnly: true,
         secure: APP.NODE_ENV === 'production',
-        sameSite: 'lax',
+        sameSite: 'none',
         maxAge: 7 * 24 * 60 * 60 * 1000
       })
       .json({ msg: 'Login exitoso' });
