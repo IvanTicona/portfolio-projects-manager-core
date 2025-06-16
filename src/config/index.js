@@ -3,7 +3,8 @@ require('dotenv').config();
 module.exports = {
   APP: {
     PORT: parseInt(process.env.PORT, 10) || 3000,
-    NODE_ENV: process.env.NODE_ENV || 'development'
+    NODE_ENV: process.env.NODE_ENV || 'development',
+    FRONTEND_URL: process.env.FRONTEND_URL,
   },
   DB: {
     URI: process.env.MONGODB_URI
