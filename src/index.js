@@ -10,7 +10,7 @@ const projectsRoutes = require('./routes/projects');
 const app = express();
 
 app.use(cors({ origin: config.APP.FRONTEND_URL, credentials: true }));
-app.options('*', cors({ origin: config.APP.FRONTEND_URL, credentials: true }));
+app.options('/*', cors({ origin: config.APP.FRONTEND_URL, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
